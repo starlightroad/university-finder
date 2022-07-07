@@ -1,0 +1,83 @@
+@use '../helpers/variables' as variable;
+@use '../helpers/mixins' as mixin;
+
+.search {
+    &-input {
+        @include mixin.font-size(14px);
+
+        @include mixin.media-breakpoint("md") {
+            width: 280px;
+        }
+
+        padding: 4px 12px;
+        outline: none;
+        border: none;
+        min-width: 192px;
+        color: rgba(variable.$color-white, 88%);
+        background-color: transparent;
+        line-height: 28px;
+
+        &::placeholder {
+            color: rgba(variable.$color-white, 64%);
+        }
+
+        &-container {
+            display: flex;
+            align-items: center;
+            padding-left: 12px;
+            border: 1px solid variable.$color-border-secondary;
+            border-radius: 8px;
+        }
+    }
+
+    &-results {
+        @include mixin.media-breakpoint("lg") {
+            position: relative;
+            width: 700px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        background-color: var(--color-results-background);
+        width: 100%;
+        list-style-type: none;
+        max-height: 50vh;
+        overflow: auto;
+        box-shadow: 0px 4px 12px rgba(variable.$color-black, 12%);
+    
+        &-item {
+            @include mixin.media-breakpoint("lg") {
+                padding: 16px 16px 16px 43px;
+            }
+
+            padding: 16px;
+            border-top: 1px solid var(--color-results-border);
+            cursor: pointer;
+            color: var(--color-results-text);
+    
+            &:first-child {
+                border-top: none;
+            }
+
+            &:hover {
+                background-color: var(--color-results-text-hover);
+            }
+        }
+
+        &-container {
+            @include mixin.z-index("search-results");
+
+            @include mixin.media-breakpoint("lg") {
+                left: unset;
+                max-width: 1200px;
+                margin: 0 auto;
+                width: auto;
+            }
+            
+            position: absolute;
+            left: 0;
+            top: variable.$height-header;
+            width: 100%;
+        }
+    }
+}

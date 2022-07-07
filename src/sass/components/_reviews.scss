@@ -1,0 +1,80 @@
+@use '../helpers/variables' as variable;
+@use '../helpers/mixins' as mixin;
+
+.reviews {
+    padding: 20px;
+
+    &-container {
+        @include mixin.z-index("reviews");
+
+        @include mixin.media-breakpoint("lg") {
+            top: 144px;
+            max-height: 720px;
+            width: 389px;
+            overflow: auto;
+        }
+
+        position: absolute;
+        top: 0;
+        background-color: var(--color-app-background);
+        height: 100%;
+    }
+
+    &-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 24px;
+
+        &-close {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-image: var(--color-button-close);
+            margin: 24px 0;
+            cursor: pointer;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &-icon {
+                stroke: white;
+            }
+        }
+    }
+
+    &-subtitle {
+        @include mixin.font-size(16px);
+
+        color: var(--color-reviews-subtitle);
+        margin-bottom: 8px;
+    }
+
+    &-title {
+        @include mixin.font-size(18px);
+        @include mixin.font-weight(bold);
+
+        margin-bottom: 16px;
+        color: var(--color-reviews-title);
+    }
+
+    .ratings {
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+
+        &-rating {
+            @include mixin.font-size(16px);
+
+            color: var(--color-reviews-ratings-text);
+            margin-right: 16px;
+        }
+    }
+
+    &-divider {
+        width: 32px;
+        height: 1px;
+        background-color: var(--color-divider);
+    }
+}

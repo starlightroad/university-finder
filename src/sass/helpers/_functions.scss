@@ -1,0 +1,6 @@
+// This function will return the rem size of a given size value.
+@function getRemValue($size) {
+    $remValue: calc($size / 16px);
+    // $remValue: math.div($size, 16px);
+    @return #{$remValue}rem;
+};

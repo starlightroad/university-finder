@@ -1,0 +1,96 @@
+@use 'variables' as variable;
+@use '../helpers/functions' as fn;
+
+// ***********
+// * LAYOUTS *
+// ***********
+
+@mixin display($value) {
+    display: $value;
+}
+
+@mixin justify-content($value) {
+    justify-content: $value;
+}
+
+@mixin align-items($value) {
+    align-items: $value;
+}
+
+@mixin flex-direction($value) {
+    flex-direction: $value;
+}
+
+@mixin background-color($color) {
+    background-color: $color;
+}
+
+@mixin cursor($value) {
+    cursor: $value;
+}
+
+// *********
+// * FONTS *
+// *********
+
+@mixin text-transform($value) {
+    text-transform: $value;
+}
+
+@mixin text-decoration($value) {
+    text-decoration: $value;
+}
+
+@mixin font-size($size) {
+    font-size: fn.getRemValue($size);
+}
+
+@mixin font-weight($weight) {
+    font-weight: map-get(variable.$font-weights, $weight);
+}
+
+@mixin z-index($element) {
+    z-index: map-get(variable.$z-index, $element);
+}
+
+// *****************
+// * MEDIA QUERIES *
+// *****************
+
+@mixin media-breakpoint($breakpoint) {
+    @if ($breakpoint == 'sm') {
+        @media only screen and (min-width: 480px) {
+            @content;
+        }
+    }
+    @if ($breakpoint == 'md') {
+        @media only screen and (min-width: 680px) {
+            @content;
+        }
+    }
+    @if ($breakpoint == 'lg') {
+        @media only screen and (min-width: 992px) {
+            @content;
+        }
+    }
+    @if ($breakpoint == 'xl') {
+        @media only screen and (min-width: 1200px) {
+            @content;
+        }
+    }
+    @if ($breakpoint == 'xxl') {
+        @media only screen and (min-width: 1400px) {
+            @content;
+        }
+    }
+}
+
+// *************
+// * KEYFRAMES *
+// *************
+
+@mixin keyframes($name) {
+    @keyframes #{$name} {
+        @content;
+    }
+}

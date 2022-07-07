@@ -1,0 +1,161 @@
+@use '../helpers/variables' as variable;
+@use '../helpers/mixins' as mixin;
+
+.card {
+    border:  1px solid var(--color-card-border);
+    // border:  1px solid variable.$color-border-primary;
+    border-radius: 12px;
+    padding: 16px;
+    background-color: var(--color-card-background);
+}
+
+.cards {
+    &-no-content {
+        text-align: center;
+        // height: 720px;
+        padding-top: 24px;
+    }
+
+    &-container {
+        @include mixin.z-index("cards-list");
+        
+        @include mixin.media-breakpoint('lg') {
+            grid-area: cards-container;
+            height: 720px;
+            margin-top: 0;
+            // padding: 0 12px 0 0;
+            padding: 0 12px 20px 20px;
+        }
+
+        padding: 0 20px 20px;
+        margin-top: 20px;
+        grid-row: 2 / span 1;
+        background-color: transparent;
+        height: calc(100vh - 356px - 20px);
+        overflow: auto;
+    }
+
+    &-list {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &-list-card {
+        padding: 12px;
+
+        &-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        &-title {
+            @include mixin.font-size(16px);
+
+            color: var(--color-card-title);
+            // color: variable.$color-black;
+        }
+
+        &-circle {
+            min-width: 32px;
+            max-width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-image: var(--color-card-logo-background);
+            // background-color: var(--color-card-logo-background);
+            // background-color: variable.$color-primary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &-title {
+                @include mixin.font-weight(bold);
+                color: var(--color-card-logo-text);
+            }
+        }
+
+        &-ratings {
+            display: flex;
+            gap: 12px;
+            margin: 12px 0 16px;
+
+            &-stars {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+            }
+
+            &-link {
+                color: var(--color-card-link-reviews);
+                // color: variable.$color-primary;
+            }
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            color: var(--color-card-text);
+            // color: variable.$color-text-secondary;
+
+            &-text {
+                @include mixin.font-size(16px);
+            }
+
+            &-link {
+                color: inherit;
+            }
+        }
+
+        &-selected {
+            // background-color: transparent;
+            background-image: var(--color-card-background-selected);
+            // background-color: variable.$color-primary;
+            box-shadow: 0 24px 12px -16px rgba(variable.$color-primary, 40%);
+    
+            .cards-list-card {
+                &-circle {
+                    background-image: none;
+                    background-color: var(--color-card-logo-background-selected);
+                    // background-color: variable.$color-white;
+                    // color: var(--color-card-logo-text-selected);
+                    // color: variable.$color-primary;
+    
+                    &-title {
+                        color: var(--color-card-logo-text-selected);
+                        // color: variable.$color-primary;
+                    }
+                }
+    
+                &-title {
+                    color: var(--color-card-title-selected);
+                    // color: variable.$color-white;
+                }
+    
+                &-ratings-link {
+                    color: var(--color-card-link-reviews-selected);
+                    // color: variable.$color-white;
+                }
+    
+                &-ratings-stars {
+                    .star {
+                        stroke: var(--color-card-star-background-selected);
+                        fill: var(--color-card-star-background-selected);
+                    }
+    
+                    .filled {
+                        stroke: var(--color-card-star-background-filled-selected);
+                        fill: var(--color-card-star-background-filled-selected);
+                    }
+                }
+    
+                &-info {
+                    color: var(--color-card-text-selected);
+                    // color: variable.$color-white;
+                }
+            }
+        }
+    }
+}

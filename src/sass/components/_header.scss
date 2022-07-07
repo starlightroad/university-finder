@@ -1,0 +1,24 @@
+@use '../helpers/variables' as variable;
+@use '../helpers/mixins' as mixin;
+
+.header {
+    @include mixin.z-index("header");
+
+    @include mixin.media-breakpoint('lg') {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: transparent;
+
+    &-container {
+        border-bottom: 1px solid variable.$color-border-primary;
+        background-color: var(--color-header-background);
+    }
+}

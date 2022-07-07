@@ -1,0 +1,49 @@
+@use '../helpers/variables' as variable;
+
+.feather {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+
+    &.search {
+        width: 18px;
+        stroke: variable.$color-white;
+    }
+
+    &.star {
+        width: 16px;
+        height: 16px;
+        stroke: var(--color-star-background);
+        fill: var(--color-star-background);
+        // stroke: variable.$color-star-secondary;
+        // fill: variable.$color-star-secondary;
+    }
+
+    &.user {
+        width: 24px;
+        height: 24px;
+        stroke: variable.$color-white;
+    }
+
+    &.filled {
+        stroke: var(--color-star-background-filled);
+        fill: var(--color-star-background-filled);
+        // stroke: variable.$color-star-primary;
+        // fill: variable.$color-star-primary;
+    }
+
+    &.sort {
+        stroke: variable.$color-primary;
+        transform: rotate(90deg) scaleX(-1);
+    }
+
+    &.moon {
+        width: 20px;
+        stroke: variable.$color-white;
+        cursor: pointer;
+    }
+}

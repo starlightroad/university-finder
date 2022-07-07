@@ -1,0 +1,10 @@
+@use '../helpers/variables' as variable;
+
+.mapboxgl-popup {
+    &-content {
+        border-radius: 8px;
+        padding: 12px 16px;
+        box-shadow: 0 4px 8px rgba(variable.$color-text-primary, 8%);
+        background-color: variable.$color-white;
+    }
+}

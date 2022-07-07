@@ -1,0 +1,23 @@
+@use '../helpers/variables' as variable;
+@use '../helpers/mixins' as mixin;
+
+.loading-placeholder {
+    @include mixin.keyframes(loadingPlaceholders) {
+        0% {
+            background-color: var(--color-loading-primary);
+        }
+        50% {
+            background-color: var(--color-loading-secondary);
+        }
+        100% {
+            background-color: var(--color-loading-primary);
+        }
+    }
+
+    animation: loadingPlaceholders 1.5s ease-in infinite;
+
+    &-card {
+        height: calc(660px / 3);
+        border-radius: 12px;
+    }
+}

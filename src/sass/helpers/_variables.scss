@@ -1,0 +1,60 @@
+// *******************
+// * COLOR VARIABLES *
+// *******************
+
+$color-primary: #396afc;
+$color-secondary: linear-gradient(to right, #2948ff, #396afc);
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+$color-text-primary: #455a64;
+$color-text-secondary: #607d8b;
+
+$color-border-primary: rgba($color-text-primary, 12%);
+$color-border-secondary: rgba($color-white, 24%);
+
+$color-button-primary: transparent;
+$color-button-hover: rgba($color-text-primary, 8%);
+
+$color-hover-primary: rgba($color-text-primary, 4%);
+
+$color-star-primary: #ffeb3b;
+$color-star-secondary: #e1e1e1;
+
+$color-header-primary: #111111;
+
+$color-scrollbar-primary: rgba($color-black, 4%);
+$color-scrollbar-secondary: rgba($color-black, 48%);
+
+$color-loading-primary: #e0e0e0;
+$color-loading-secondary: #eeeeee;
+
+// *****************
+// * MAP VARIABLES *
+// *****************
+
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 700
+);
+
+// *********************
+// * ELEMENT VARIABLES *
+// *********************
+
+$height-header: 56px;
+$height-sort-button: 42px;
+
+// *********************
+// * Z-INDEX VARIABLES *
+// *********************
+
+$z-index: (
+    "header": 2,
+    "map": 3,
+    "cards-list": 1,
+    "reviews": 4,
+    "search-results": 5
+);

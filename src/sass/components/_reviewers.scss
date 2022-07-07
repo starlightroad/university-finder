@@ -1,0 +1,60 @@
+@use '../helpers/variables' as variable;
+@use '../helpers/mixins' as mixin;
+
+.reviewers {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 24px;
+
+    &-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 32px;
+
+        &-image {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(#000000, 88%);
+            background-size: cover;
+            margin-right: 24px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-user {
+            @include mixin.font-size(18px);
+            @include mixin.font-weight(bold);
+
+            color: var(--color-card-title);
+            // color: variable.$color-text-primary;
+        }
+    }
+
+    &-ratings {
+        display: flex;
+        margin-bottom: 24px;
+
+        &-stars {
+            margin-right: 16px;
+        }
+
+        &-time {
+            @include mixin.font-size(16px);
+
+            color: var(--color-card-text);
+            // color: variable.$color-text-secondary;
+        }
+    }
+
+    &-text {
+        @include mixin.font-size(16px);
+
+        color: var(--color-card-text);
+        // color: variable.$color-text-secondary;
+    }
+}

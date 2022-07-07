@@ -1,0 +1,19 @@
+@use '../helpers/variables' as variable;
+
+.cards-container,
+.reviews-container,
+.search-results {
+    &::-webkit-scrollbar {
+        width: 8px;
+
+        &-track {
+            border-radius: 8px;
+            background-color: var(--color-scrollbar-track);
+        }
+    
+        &-thumb {
+            border-radius: 8px;
+            background-color: var(--color-scrollbar-thumb);
+        }
+    }
+}

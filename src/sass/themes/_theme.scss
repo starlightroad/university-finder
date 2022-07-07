@@ -1,0 +1,109 @@
+@use '../helpers/variables' as variable;
+
+html[data-theme="light"] {
+    --color-app-background: #fafafa;
+
+    --color-header-background: #{variable.$color-header-primary};
+
+    --color-card-background: #{variable.$color-white};
+    --color-card-border: #{rgba(variable.$color-text-primary, 12%)};
+    --color-card-title: #{variable.$color-black};
+    --color-card-text: #{variable.$color-text-secondary};
+    --color-card-logo-background: #{variable.$color-secondary};
+    --color-card-logo-text: #{variable.$color-white};
+    --color-card-link-reviews: #{variable.$color-primary};
+
+    --color-card-background-selected: #{variable.$color-secondary};
+    --color-card-border-selected: #{rgba(variable.$color-text-primary, 12%)};
+    --color-card-title-selected: #{variable.$color-white};
+    --color-card-text-selected: #{variable.$color-white};
+    --color-card-logo-background-selected: #{variable.$color-white};
+    --color-card-logo-text-selected: #{variable.$color-primary};
+    --color-card-link-reviews-selected: #{variable.$color-white};
+    --color-card-star-background-selected: #b6c6fe;
+    --color-card-star-background-filled-selected: #{variable.$color-white};
+
+    --color-reviews-title: #{variable.$color-text-primary};
+    --color-reviews-subtitle: #{variable.$color-text-secondary};
+    --color-reviews-ratings-text: #{variable.$color-text-secondary};
+
+    --color-star-background: #{variable.$color-star-secondary};
+    --color-star-background-filled: #{variable.$color-star-primary};
+
+    --color-scrollbar-track: #{variable.$color-scrollbar-primary};
+    --color-scrollbar-thumb: #{variable.$color-scrollbar-secondary};
+
+    --color-button-background: transparent;
+    --color-button-close: #{variable.$color-secondary};
+    --color-button-text: #{variable.$color-text-primary};
+    --color-button-border: #{variable.$color-border-primary};
+
+    --color-dropdown-border: #{variable.$color-border-primary};
+    --color-dropdown-background: #{variable.$color-white};
+    --color-dropdown-text: #{variable.$color-text-primary};
+    --color-dropdown-text-hover: #{variable.$color-button-hover};
+
+    --color-loading-primary: #{variable.$color-loading-primary};
+    --color-loading-secondary: #{variable.$color-loading-secondary};
+
+    --color-divider: #{rgba(variable.$color-text-primary, 32%)};
+
+    --color-results-background: #{variable.$color-white};
+    --color-results-text: #{variable.$color-text-primary};
+    --color-results-text-hover: #{variable.$color-hover-primary};
+    --color-results-border: #{variable.$color-border-primary};
+}
+
+html[data-theme="dark"] {
+    --color-app-background: #121212;
+
+    --color-header-background: #{variable.$color-black};
+
+    --color-card-background: #202020;
+    --color-card-border: #{rgba(variable.$color-white, 12%)};
+    --color-card-title: #{rgba(variable.$color-white, 87%)};
+    --color-card-text: #{rgba(variable.$color-white, 64%)};
+    --color-card-logo-background: #{variable.$color-secondary};
+    --color-card-logo-text: #{variable.$color-white};
+    --color-card-link-reviews: #6287f3;
+
+    --color-card-background-selected: #{variable.$color-secondary};
+    --color-card-border-selected: #{rgba(variable.$color-text-primary, 12%)};
+    --color-card-title-selected: #{variable.$color-white};
+    --color-card-text-selected: #{variable.$color-white};
+    --color-card-logo-background-selected: #{variable.$color-white};
+    --color-card-logo-text-selected: #{variable.$color-primary};
+    --color-card-link-reviews-selected: #{variable.$color-white};
+    --color-card-star-background-selected: #b6c6fe;
+    --color-card-star-background-filled-selected: #{variable.$color-white};
+
+    --color-reviews-title: #{rgba(variable.$color-white, 87%)};
+    --color-reviews-subtitle: #{rgba(variable.$color-white, 64%)};
+    --color-reviews-ratings-text: #{rgba(variable.$color-white, 64%)};
+
+    --color-star-background: #5e5e5e;
+    --color-star-background-filled: #{variable.$color-star-primary};
+
+    --color-scrollbar-track: #202020;
+    --color-scrollbar-thumb: #404040;
+
+    --color-button-background: var(--color-card-background);
+    --color-button-close: #{variable.$color-secondary};
+    --color-button-text: var(--color-card-title);
+    --color-button-border: var(--color-card-border);
+
+    --color-dropdown-border: var(--color-card-border);
+    --color-dropdown-background: var(--color-card-background);
+    --color-dropdown-text: var(--color-card-text);
+    --color-dropdown-text-hover: #{rgba(variable.$color-white, 4%)};
+
+    --color-loading-primary: #e0e0e0;
+    --color-loading-secondary: #eeeeee;
+
+    --color-divider: #{rgba(variable.$color-white, 32%)};
+
+    --color-results-background: var(--color-app-background);
+    --color-results-text: #{rgba(variable.$color-white, 72%)};
+    --color-results-text-hover: var(--color-dropdown-text-hover);
+    --color-results-border: #{rgba(variable.$color-white, 8%)};
+}

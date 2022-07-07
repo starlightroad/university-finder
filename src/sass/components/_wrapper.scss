@@ -1,0 +1,7 @@
+@use '../helpers/variables' as variable;
+@use '../helpers/mixins' as mixin;
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+}
