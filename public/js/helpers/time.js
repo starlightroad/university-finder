@@ -8,17 +8,17 @@ class Time {
         const days = hours / 24;
         const months = days / 30.4;
         const years = days / 365;
-        const unitsOfTime = new Map([
-            [0, { unit: 'year', number: years }],
-            [1, { unit: 'month', number: months }],
-            [2, { unit: 'day', number: days }],
-            [3, { unit: 'hour', number: hours }],
-            [4, { unit: 'minute', number: minutes }],
-            [5, { unit: 'second', number: seconds }]
-        ]);
+        const data = [
+            { unit: 'year', number: years },
+            { unit: 'month', number: months },
+            { unit: 'day', number: days },
+            { unit: 'hour', number: hours },
+            { unit: 'minute', number: minutes },
+            { unit: 'second', number: seconds }
+        ];
 
-        for (let i = 0; i < unitsOfTime.size; i += 1) {
-            const unitOfTime = unitsOfTime.get(i);
+        for (let i = 0; i < data.length; i += 1) {
+            const unitOfTime = data[i];
             const number = Math.trunc(unitOfTime.number);
 
             if (number) {
