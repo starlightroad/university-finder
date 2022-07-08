@@ -28,4 +28,4 @@ class Time {
     }
 }
 
-export default new Time();
+export default Time;

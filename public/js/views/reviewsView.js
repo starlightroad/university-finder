@@ -1,6 +1,6 @@
 import View from './View.js';
-import time from '../helpers/time.js';
-import Rating from '../helpers/rating.js';
+import Time from '../helpers/Time.js';
+import Rating from '../helpers/Rating.js';
 
 class ReviewsView extends View {
     addHandlerRender(handler) {
@@ -110,6 +110,7 @@ class ReviewsView extends View {
             </svg>
         `;
         const ratingClass = new Rating();
+        const timeClass = new Time();
 
         return `
             ${reviews.data.reviews
@@ -130,7 +131,7 @@ class ReviewsView extends View {
                             ${ratingClass._generateRatingsMarkup(review.rating)}
                         </div>
                         
-                        <p class="reviewers-ratings-time">${time.getReviewTimestamp(review.time_created)}</p>
+                        <p class="reviewers-ratings-time">${timeClass.getReviewTimestamp(review.time_created)}</p>
                     </div>
 
                     <p class="reviewers-text">

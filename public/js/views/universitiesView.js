@@ -1,5 +1,5 @@
 import View from './View.js';
-import Rating from '../helpers/rating.js';
+import Rating from '../helpers/Rating.js';
 
 class UniversitiesView extends View {
     addHandlerClick(handler) {
