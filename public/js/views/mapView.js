@@ -1,5 +1,5 @@
 import View from './View.js';
-import AppError from '../helpers/error.js';
+import AppError from '../helpers/Error.js';
 
 class MapView extends View {
     styles = ['streets-v11', 'light-v10', 'dark-v10', 'satellite-v9'];
