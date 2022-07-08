@@ -348,6 +348,7 @@ input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-searc
   font-weight: 700;
   margin-bottom: 16px;
   color: var(--color-reviews-title);
+  text-align: center;
 }
 .reviews .ratings {
   display: flex;
