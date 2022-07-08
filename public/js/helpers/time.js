@@ -1,6 +1,6 @@
 class Time {
     getReviewTimestamp(date) {
-        const past = new Date(date).getTime();
+        const past = new Date(date.replaceAll('-', '/')).getTime();
         const present = new Date().getTime();
         const seconds = (present - past) / 1000;
         const minutes = seconds / 60;
