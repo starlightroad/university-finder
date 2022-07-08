@@ -2,7 +2,6 @@ import express from 'express';
 import morgan from 'morgan';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import corsMiddleware from './src/middleware/cors.js';
 
 import AppError from './src/utilities/appError.js';
 import globalErrorHandler from './src/controllers/errorController.js';
@@ -26,7 +25,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use('/', corsMiddleware(), router);
+app.use('/', router);
 
 app.all('*', (req, res, next) => {
     next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
