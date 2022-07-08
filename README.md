@@ -4,7 +4,7 @@ This project involves finding universities at a given location. See the live sit
 
 ## Technologies used
 
-HTML, CSS (SCSS), JavaScript, Node.js, Express, Mongoose
+HTML - CSS (SCSS) - JavaScript - Node.js - Express - Mongoose
 
 ## APIs used
 
@@ -14,7 +14,7 @@ Mapbox API - Yelp API - Hipolabs API
 
 Search for a university within the US.
 
-Show nearby universites using using the search functionality or the client's location.
+Show nearby universities using using the search functionality or the client's location.
 
 See user reviews of a given university.
 
