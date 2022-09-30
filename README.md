@@ -1,6 +1,6 @@
 # University Finder
 
-This project involves finding universities at a given location. See the live site here https://university-finder-us.herokuapp.com.
+This project involves finding universities at a given location. See the live site here https://university-finder-us.cyclic.app.
 
 ## Technologies used
 
