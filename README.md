@@ -1,6 +1,6 @@
 # University Finder
 
-This project involves finding universities at a given location. See the live site here https://university-finder-us.cyclic.app.
+This project involves finding universities at a given location. See the live site here [https://university-finder-us.cyclic.app](https://university-finder-us.cyclic.app).
 
 ## Technologies used
 
